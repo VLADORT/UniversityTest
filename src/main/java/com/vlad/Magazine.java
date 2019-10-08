@@ -1,12 +1,29 @@
 package com.vlad;
 
 public class Magazine {
-    String receiverName;
-    String magazineName;
+    private int price;
+    private String name;
 
-
-    public Magazine(String receiverName, String magazineName) {
-        this.receiverName = receiverName;
-        this.magazineName = magazineName;
+    public int getPrice() {
+        return price;
     }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Magazine(String name, int price) {
+        this.name = name;
+        this.price = price;
+    }
+
+
 }

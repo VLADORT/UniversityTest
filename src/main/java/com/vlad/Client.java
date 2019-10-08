@@ -9,10 +9,10 @@ public class Client implements Observer {
         this.name = name;
     }
 
-    public void checkMagazine(ArrayList<Magazine> magazines) {
+    public void checkMagazine(ArrayList<Delivery> magazines) {
         for (int i = 0; i < magazines.size(); i++) {
-            if (name.compareTo(magazines.get(i).receiverName) == 0)
-                System.out.println(name + ": " + magazines.get(i).magazineName);
+            if (name.compareTo(magazines.get(i).getReceiver().getName()) == 0)
+                System.out.println(name + ": " + magazines.get(i).getMagazine().getName());
         }
     }
 

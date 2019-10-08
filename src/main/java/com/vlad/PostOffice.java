@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public class PostOffice implements Cast {
-    private ArrayList<Magazine> magazines;
+    private ArrayList<Delivery> deliveries;
 
-    public ArrayList<Magazine> getMagazines() {
-        return magazines;
+    public ArrayList<Delivery> getDeliveries() {
+        return deliveries;
     }
 
-    public void setMagazines(ArrayList<Magazine> magazines) {
-        this.magazines = magazines;
+    public void setDeliveries(ArrayList<Delivery> deliveries) {
+        this.deliveries = deliveries;
     }
 
     public ArrayList<Observer> getObservers() {
@@ -25,17 +25,17 @@ public class PostOffice implements Cast {
     private ArrayList<Observer> observers;
 
     PostOffice() {
-        magazines = new ArrayList<>();
+        deliveries = new ArrayList<>();
         observers = new ArrayList<>();
     }
 
 
-    public ArrayList<Magazine> getState() {
-        return magazines;
+    public ArrayList<Delivery> getState() {
+        return deliveries;
     }
 
-    public void addMagazine(Magazine... values) {
-        magazines.addAll(Arrays.asList(values));
+    public void addRecords(Delivery... values) {
+        deliveries.addAll(Arrays.asList(values));
         Notify();
     }
 
