@@ -5,6 +5,23 @@ import java.util.Arrays;
 
 public class PostOffice implements Cast {
     private ArrayList<Magazine> magazines;
+
+    public ArrayList<Magazine> getMagazines() {
+        return magazines;
+    }
+
+    public void setMagazines(ArrayList<Magazine> magazines) {
+        this.magazines = magazines;
+    }
+
+    public ArrayList<Observer> getObservers() {
+        return observers;
+    }
+
+    public void setObservers(ArrayList<Observer> observers) {
+        this.observers = observers;
+    }
+
     private ArrayList<Observer> observers;
 
     PostOffice() {
