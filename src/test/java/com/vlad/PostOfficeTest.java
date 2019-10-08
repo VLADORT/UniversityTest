@@ -1,6 +1,4 @@
 package com.vlad;
-
-import junit.framework.AssertionFailedError;
 import org.junit.*;
 
 import java.util.Arrays;
@@ -26,8 +24,9 @@ public class PostOfficeTest {
         bob = new Client("bob");
         jon = new Client("jon");
         lol = new Client("lol");
-        magazine1 = new Magazine("jon", "About Cars");
-        magazine2 = new Magazine("bob", "About Animals");
+        magazine1 = new Magazine("Wash Post", 5);
+        magazine2 = new Magazine("BBC", 10);
+
 //        postOffice.addObserver(bob);
 //
 //        postOffice.addObserver(jon);
@@ -43,9 +42,9 @@ public class PostOfficeTest {
 
     @Test
     public void addMagazine() {
-        postOffice.addMagazine(magazine1);
-        postOffice.addMagazine(magazine2);
-        assertEquals(postOffice.getMagazines(), Arrays.asList(magazine1, magazine2));
+        postOffice.addRecords(new Delivery(magazine1,bob));
+        postOffice.addRecords(new Delivery(magazine2,jon));
+        assertEquals(postOffice.getDeliveries(), Arrays.asList(new Delivery(magazine1,bob), new Delivery(magazine2,jon)));
     }
 
     @Test
@@ -58,8 +57,7 @@ public class PostOfficeTest {
     @Test
     public void removeObserver() {
         postOffice.removeObserver(jon);
-        postOffice.removeObserver(lol);
-        assertThat(postOffice.getObservers(), hasSize(0));
+        assertThat(postOffice.getObservers(), not(contains(jon)));
     }
 
     @Test(expected = Error.class)
