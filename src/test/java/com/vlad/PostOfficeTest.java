@@ -62,11 +62,11 @@ public class PostOfficeTest {
         assertThat(postOffice.getObservers(), not(contains(jon)));
     }
 
-    @Test(expected = Error.class)
-    @Ignore
-    public void shouldThrowError() {
-        throw new StackOverflowError();
-    }
+//    @Test(expected = Error.class)
+//    @Ignore
+//    public void shouldThrowError() {
+//        throw new StackOverflowError();
+//    }
 
 
 //    @Test(timeout = 10)
