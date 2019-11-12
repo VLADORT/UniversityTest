@@ -7,7 +7,7 @@ public class Main {
 //creating clients
         Client bob = new Client("bob");
         Client jon = new Client("jon");
-        Client lol = new Client("lol");
+        Client lol = new Client("hgjhkj");
 //creating magazines
         Magazine magazine1 = new Magazine("About Animalol", 20);
         Magazine magazine2 = new Magazine("About Plants", 30);
