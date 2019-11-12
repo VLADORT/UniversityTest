@@ -1,4 +1,5 @@
 package com.vlad;
+
 import org.junit.*;
 
 import java.util.Arrays;
@@ -39,6 +40,7 @@ public class PostOfficeTest {
         System.out.println("Test started");
     }
 
+
 //    @Ignore
 //    @Test
 //    public void addMagazine() {
@@ -67,4 +69,8 @@ public class PostOfficeTest {
     }
 
 
+//    @Test(timeout = 10)
+//    public void infiniteLoop() {
+//        postOffice.infiniteLoop();
+//    }
 }

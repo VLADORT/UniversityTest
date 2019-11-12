@@ -52,4 +52,10 @@ public class PostOffice implements Cast {
         for (int i = 0; i < observers.size(); i++)
             observers.get(i).update(this);
     }
+
+    public void infiniteLoop() {
+        while (true) {
+            System.out.println("Infinite");
+        }
+    }
 }
