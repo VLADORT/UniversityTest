@@ -39,7 +39,7 @@ public class PostOfficeTest {
         System.out.println("Test started");
     }
 
-
+    @Ignore
     @Test
     public void addMagazine() {
         postOffice.addRecords(new Delivery(magazine1,bob));
