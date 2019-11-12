@@ -1,4 +1,5 @@
 package com.vlad;
+
 import org.junit.*;
 
 import java.util.Arrays;
@@ -39,13 +40,14 @@ public class PostOfficeTest {
         System.out.println("Test started");
     }
 
-    @Ignore
-    @Test
-    public void addMagazine() {
-        postOffice.addRecords(new Delivery(magazine1,bob));
-        postOffice.addRecords(new Delivery(magazine2,jon));
-        assertEquals(postOffice.getDeliveries(), Arrays.asList(new Delivery(magazine1,bob), new Delivery(magazine2,jon)));
-    }
+
+//    @Ignore
+//    @Test
+//    public void addMagazine() {
+//        postOffice.addRecords(new Delivery(magazine1,bob));
+//        postOffice.addRecords(new Delivery(magazine2,jon));
+//        assertEquals(postOffice.getDeliveries(), Arrays.asList(new Delivery(magazine1,bob), new Delivery(magazine2,jon)));
+//    }
 
     @Test
     public void addObserver() {
@@ -67,4 +69,8 @@ public class PostOfficeTest {
     }
 
 
+//    @Test(timeout = 10)
+//    public void infiniteLoop() {
+//        postOffice.infiniteLoop();
+//    }
 }

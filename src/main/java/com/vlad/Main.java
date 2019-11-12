@@ -14,7 +14,7 @@ public class Main {
 //delivery brings new magazines
         Delivery delivery1 = new Delivery(magazine1, bob);
         Delivery delivery2 = new Delivery(magazine2, jon);
-        Delivery delivery3 = new Delivery(magazine2, bob);
+        Delivery delivery3 = new Delivery(magazine2, lol);
 //adding clients as observers
         postOffice.addObserver(bob);
         postOffice.addObserver(jon);
